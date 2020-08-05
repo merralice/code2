@@ -26,7 +26,7 @@ class UserRegister(Resource):
         if UserModel.find_by_username(data['username']): # make sure no duplicates
             return {"message": "A user with that username already exists"}, 400
 
-        user = UserModel(data['username'], data['password'])
+        user = UserModel(**data)
         user.save_to_db()
 
         #connection = sqlite3.connect('data.db')
