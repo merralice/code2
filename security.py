@@ -10,9 +10,9 @@ from models.user import UserModel
 #]
 
 # improved:
-users = [
-    UserModel(1, 'merr', 'asdf')
-]
+#users = [
+#    UserModel('merr', 'asdf')
+#]
 
 #username_mapping = { 'bob': {
 #        'id': 1,
@@ -22,7 +22,7 @@ users = [
 #}
 
 # improved:
-username_mapping = {u.username: u for u in users} # comprehension; assigning key value pairs
+#username_mapping = {u.username: u for u in users} # comprehension; assigning key value pairs
 
 #userid_mapping = { 1: {
 #        'id': 1,
@@ -32,7 +32,7 @@ username_mapping = {u.username: u for u in users} # comprehension; assigning key
 #}
 
 # improved:
-userid_mapping = {u.id: u for u in users}
+#userid_mapping = {u.id: u for u in users}
 
 def authenticate(username, password):
     user = UserModel.find_by_username(username)
