@@ -86,6 +86,6 @@ api.add_resource(StoreList, '/stores')
 api.add_resource(UserRegister, '/register')
 
 if __name__ == '__main__': # circumvents importing issues; only the file that you run is "main"; if this file gets imported, flask app won't run
-    #from db import db # not sure if I need this; may cause importing issues?
-    #db.init_app(app)
+    from db import db # not sure if I need this; may cause importing issues?
+    db.init_app(app)
     app.run(port=5000, debug=True) # port 5000 is the default so this is not actually necessary
